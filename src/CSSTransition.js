@@ -182,8 +182,8 @@ class CSSTransition extends React.Component {
 
   removeClasses(node, type) {
     const { className, activeClassName } = this.getClassNames(type)
-    className && removeClass(node, className);
-    activeClassName && removeClass(node, activeClassName);
+    node && className && removeClass(node, className);
+    node && activeClassName && removeClass(node, activeClassName);
   }
 
   reflowAndAddClass(node, className) {
